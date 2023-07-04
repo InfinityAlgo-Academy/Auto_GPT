@@ -1,0 +1,113 @@
+interactions:
+- request:
+    body: '{"messages": [{"role": "system", "content": "\nYour task is to devise up
+      to 5 highly effective goals and an appropriate role-based name (_GPT) for an
+      autonomous agent, ensuring that the goals are optimally aligned with the successful
+      completion of its assigned task.\n\nThe user will provide the task, you will
+      provide only the output in the exact format specified below with no explanation
+      or conversation.\n\nExample input:\nHelp me with marketing my business\n\nExample
+      output:\nName: CMOGPT\nDescription: a professional digital marketer AI that
+      assists Solopreneurs in growing their businesses by providing world-class expertise
+      in solving marketing problems for SaaS, content products, agencies, and more.\nGoals:\n-
+      Engage in effective problem-solving, prioritization, planning, and supporting
+      execution to address your marketing needs as your virtual Chief Marketing Officer.\n\n-
+      Provide specific, actionable, and concise advice to help you make informed decisions
+      without the use of platitudes or overly wordy explanations.\n\n- Identify and
+      prioritize quick wins and cost-effective campaigns that maximize results with
+      minimal time and budget investment.\n\n- Proactively take the lead in guiding
+      you and offering suggestions when faced with unclear information or uncertainty
+      to ensure your marketing strategy remains on track.\n"}, {"role": "user", "content":
+      "Task: ''Write a wikipedia style article about the project: https://github.com/significant-gravitas/Auto-GPT''\nRespond
+      only with the output in the exact format specified in the system prompt, with
+      no explanation or conversation."}], "model": "gpt-3.5-turbo", "temperature":
+      0.0, "max_tokens": 0}'
+    headers:
+      AGENT-MODE:
+      - AAAAAAAAAAAAAAAAAAAAAMLheAAaAAAA0%2BuSeid%2BULvsea4JtiGRiSDSJSI%3DEUifiRBkKG5E2XzMDjRfl76ZC9Ub0wnz4XsNiRVBChTYbJcE3F
+      AGENT-TYPE:
+      - Auto-GPT-2023-X-TYPE
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '1669'
+      Content-Type:
+      - application/json
+    method: POST
+    uri: https://api.openai.com/v1/chat/completions
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAAA3RUTW8bRwy961cQe5YEK3FkW7egLYwcWvfQwkjrIqBmuLu0ZjnbGY4UOfB/Dzgr
+        R9Whlz3sI997/Bh+mwE07JsNNK5HdcMYFjef26tPD1e3D4/p8fP17utf7fP9r3d/vsgtPz83c8uI
+        22dy+pa1dHEYAylHmWCXCJWMdbW+vb2++7B6t67AED0FS+tGXbxfflhoSdu4uFqv3p8y+8iOcrOB
+        v2cAAN/q1zyKp6/NBq7mb38Gyhk7ajY/ggCaFIP9aTBnzoqizfwMuihKUm3/hgNt4JF3fP/7H0/y
+        M2WXeLQKNoACWDRKHGLJ8PETYEeikEdyjIFfyAML1BpZOrDiE/UkmfcEKB7QuZJQqfKP5BkXWY+B
+        AJOyC5SXb8rAGTxl7oQ8aITJNpRMKZtIR0Jpkum56xf/FgysRzhVAtsjBNpTws5CWDPsJB4C+W5y
+        UsRTsj54w2MLe0xsVWkc2eXlk9xHDHnzJAv4KYovTkH7mGLpekiUCZPrIQpoTzCmaFOHp+Zj0biw
+        xjVVpUPtKUGiQHsUBZY2pgGtm9CmOBjCuA0EOZbkyOSBJJdElXjqlztWMpfI85ZrmbGd8KltS3P5
+        kDoUfpkSJ+E6j7MiCyBkTcVpMaySRosThQFFKM2hjSHEgzXFeGqHMHmYWKaiCnsKLJTNBp5neWHn
+        MbESIBwohMUhsSpJTSfppqGcokF71DrEwF2vueru6AgtofnMc2iLOKvARsz2w3hsN7hlh+LorR8X
+        AzhNpbr55T89PclyhjYRTXPYMubKOtpsRTMgCBVNGGCMLFpXhOkwN9o9161B2GIweQ8jJXsFaot+
+        uRTL0wYpS4klhyOU0dsTMDUejO3S1xYzeSOxXYeWyG/R7Wq40AE87SnEcagmEwU7J7Y1/1t+c3rm
+        rz/uQ8vCuf+SCHMUe/NZ4ziFvc4A/qn3plyckGZMcRj1i8YdiR2hd3eria85n7gzurpZn1CNiuEM
+        XK9vZqbyOvsOAAD//wMAqH/59mAFAAA=
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Cache-Control:
+      - no-cache, must-revalidate
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - 7e19692c4a25817c-ORD
+      Content-Encoding:
+      - gzip
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 04 Jul 2023 18:25:29 GMT
+      Function-Execution-Id:
+      - e78ibj7zyirf
+      Openai-Model:
+      - gpt-3.5-turbo-0613
+      Openai-Organization:
+      - significant-gravitas
+      Openai-Processing-Ms:
+      - '2901'
+      Openai-Version:
+      - '2020-10-01'
+      Server:
+      - Google Frontend
+      Strict-Transport-Security:
+      - max-age=15724800; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Cloud-Trace-Context:
+      - 9157213abaa78e51f673f78c29a49872;o=1
+      X-Powered-By:
+      - Express
+      X-Ratelimit-Limit-Requests:
+      - '3500'
+      X-Ratelimit-Limit-Tokens:
+      - '90000'
+      X-Ratelimit-Remaining-Requests:
+      - '3499'
+      X-Ratelimit-Remaining-Tokens:
+      - '85903'
+      X-Ratelimit-Reset-Requests:
+      - 17ms
+      X-Ratelimit-Reset-Tokens:
+      - 2.73s
+      X-Request-Id:
+      - 111cbd6f03a3e8b627de6cc1e88f9baa
+    status:
+      code: 200
+      message: OK
+version: 1
