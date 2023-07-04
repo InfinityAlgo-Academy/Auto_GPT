@@ -4,6 +4,7 @@ import os
 from typing import TYPE_CHECKING, Any, Union
 
 import yaml
+from pydantic import BaseModel
 
 if TYPE_CHECKING:
     from autogpt.config import Config
@@ -12,24 +13,10 @@ from autogpt.logs import logger
 from autogpt.plugins.plugin_config import PluginConfig
 
 
-class PluginsConfig:
+class PluginsConfig(BaseModel):
     """Class for holding configuration of all plugins"""
 
     plugins: dict[str, PluginConfig]
-
-    def __init__(self, plugins_config: dict[str, Any]):
-        self.plugins = {}
-        for name, plugin in plugins_config.items():
-            if type(plugin) == dict:
-                self.plugins[name] = PluginConfig(
-                    name,
-                    plugin.get("enabled", False),
-                    plugin.get("config", {}),
-                )
-            elif type(plugin) == PluginConfig:
-                self.plugins[name] = plugin
-            else:
-                raise ValueError(f"Invalid plugin config data type: {type(plugin)}")
 
     def __repr__(self):
         return f"PluginsConfig({self.plugins})"
@@ -43,7 +30,7 @@ class PluginsConfig:
 
     @classmethod
     def load_config(cls, global_config: Config) -> "PluginsConfig":
-        empty_config = cls({})
+        empty_config = cls(plugins={})
 
         try:
             config_data = cls.deserialize_config_file(global_config=global_config)
@@ -52,7 +39,7 @@ class PluginsConfig:
                     f"Expected plugins config to be a dict, got {type(config_data)}, continuing without plugins"
                 )
                 return empty_config
-            return cls(config_data)
+            return cls(plugins=config_data)
 
         except BaseException as e:
             logger.error(

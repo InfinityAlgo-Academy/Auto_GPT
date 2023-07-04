@@ -4,7 +4,7 @@ from __future__ import annotations
 import contextlib
 import os
 import re
-from typing import Dict
+from typing import Dict, Optional
 
 import yaml
 from colorama import Fore
@@ -13,7 +13,6 @@ from autogpt.core.configuration.schema import Configurable, SystemSettings
 from autogpt.plugins.plugins_config import PluginsConfig
 
 AZURE_CONFIG_FILE = os.path.join(os.path.dirname(__file__), "../..", "azure.yaml")
-from typing import Optional
 
 
 class Config(SystemSettings):
@@ -25,7 +24,7 @@ class Config(SystemSettings):
     file_logger_path: Optional[str] = None
     debug_mode: bool
     plugins_dir: str
-    plugins_config: PluginsConfig
+    plugins_config: PluginsConfig = None
     continuous_limit: int
     speak_mode: bool
     skip_reprompt: bool
@@ -89,7 +88,7 @@ class Config(SystemSettings):
             self.plugins_config = PluginsConfig.load_config(self)
 
 
-class ConfigBuilder(Configurable[Config]):
+class ConfigBuilder(Configurable):
     default_plugins_config_file = os.path.join(
         os.path.dirname(os.path.abspath(__file__)), "..", "..", "plugins_config.yaml"
     )
@@ -104,7 +103,7 @@ class ConfigBuilder(Configurable[Config]):
     else:
         default_tts_provider = "gtts"
 
-    defaults_settings = Config(
+    default_settings = Config(
         name="Default Server Config",
         description="This is a default server configuration",
         smart_llm_model="gpt-3.5-turbo",
@@ -114,7 +113,7 @@ class ConfigBuilder(Configurable[Config]):
         skip_news=False,
         debug_mode=False,
         plugins_dir="plugins",
-        plugins_config=PluginsConfig({}),
+        plugins_config=PluginsConfig(plugins={}),
         speak_mode=False,
         skip_reprompt=False,
         allow_downloads=False,
