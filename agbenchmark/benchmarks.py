@@ -9,19 +9,12 @@ from autogpt.models.command_registry import CommandRegistry
 from autogpt.prompts.prompt import DEFAULT_TRIGGERING_PROMPT
 from autogpt.workspace import Workspace
 
-def run_specific_agent(task) -> Tuple[str, int]:
 
+def run_specific_agent(task) -> Tuple[str, int]:
     cycle_count = 0
 
     agent = bootstrap_agent(task)
-    response = agent.start_interaction_loop()
-
-    if response:
-        cycle_count += 1
-
-
-
-    return response, 1
+    agent.start_interaction_loop()
 
 
 def bootstrap_agent(task):
@@ -63,6 +56,7 @@ def get_command_registry(config: Config):
     for command_category in enabled_command_categories:
         command_registry.import_commands(command_category)
     return command_registry
+
 
 if __name__ == "__main__":
     # The first argument is the script name itself, second is the task
