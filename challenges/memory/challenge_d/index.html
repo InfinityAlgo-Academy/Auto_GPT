@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://docs.agpt.co/challenges/memory/challenge_d/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Memory Challenge D - Auto-GPT</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Memory Challenge D";
+        var mkdocs_page_input_path = "challenges/memory/challenge_d.md";
+        var mkdocs_page_url = "/challenges/memory/challenge_d/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Auto-GPT
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../setup/">Setup</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../plugins/">Plugins</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../configuration/options/">Options</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../configuration/search/">Search</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../configuration/memory/">Memory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../configuration/voice/">Voice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../configuration/imagegen/">Image Generation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help us improve Auto-GPT</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../share-your-logs/">Share your debug logs with us</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../contributing/">Contribution guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../testing/">Running tests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../code-of-conduct/">Code of Conduct</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Challenges</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">List of Challenges</a>
+    <ul class="current">
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">Memory</a>
+    <ul class="current">
+                <li class="toctree-l3"><a class="reference internal" href="../introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../challenge_a/">Memory Challenge A</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../challenge_b/">Memory Challenge B</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../challenge_c/">Memory Challenge C</a>
+                </li>
+                <li class="toctree-l3 current"><a class="reference internal current" href="./">Memory Challenge D</a>
+    <ul class="current">
+    <li class="toctree-l4"><a class="reference internal" href="#description">Description</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#files">Files</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Information retrieval</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../../information_retrieval/introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../information_retrieval/challenge_a/">Information Retrieval Challenge A</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../../information_retrieval/challenge_b/">Information Retrieval Challenge B</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../submit/">Submit a Challenge</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../beat/">Beat a Challenge</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/Significant-Gravitas/Auto-GPT/blob/master/LICENSE">License</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Auto-GPT</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Challenges &raquo;</li>
+          <li>List of Challenges &raquo;</li>
+          <li>Memory &raquo;</li>
+      <li class="breadcrumb-item active">Memory Challenge D</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Significant-Gravitas/Auto-GPT/edit/master/docs/challenges/memory/challenge_d.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="memory-challenge-c">Memory Challenge C</h1>
+<p><strong>Status</strong>: Current level to beat: level 1</p>
+<p><strong>Command to try</strong>: 
+<code>`
+pytest -s tests/challenges/memory/test_memory_challenge_d.py --level=1</code></p>
+<h2 id="description">Description</h2>
+<p>The provided code is a unit test designed to validate an AI's ability to track events and beliefs of characters in a story involving moving objects, specifically marbles. This scenario is an advanced form of the classic "Sally-Anne test", a psychological test used to measure a child's social cognitive ability to understand that others' perspectives and beliefs may differ from their own.</p>
+<p>Here is an explanation of the challenge:</p>
+<p>The AI is given a series of events involving characters Sally, Anne, Bob, and Charlie, and the movements of different marbles. These events are designed as tests at increasing levels of complexity.</p>
+<p>For each level, the AI is expected to keep track of the events and the resulting beliefs of each character about the locations of each marble. These beliefs are affected by whether the character was inside or outside the room when events occurred, as characters inside the room are aware of the actions, while characters outside the room aren't.</p>
+<p>After the AI processes the events and generates the beliefs of each character, it writes these beliefs to an output file in JSON format.</p>
+<p>The check_beliefs function then checks the AI's beliefs against the expected beliefs for that level. The expected beliefs are predefined and represent the correct interpretation of the events for each level.</p>
+<p>If the AI's beliefs match the expected beliefs, it means the AI has correctly interpreted the events and the perspectives of each character. This would indicate that the AI has passed the test for that level.</p>
+<p>The test runs for levels up to the maximum level that the AI has successfully beaten, or up to a user-selected level.</p>
+<h2 id="files">Files</h2>
+<ul>
+<li><code>instructions_1.txt</code></li>
+</ul>
+<p>"Sally has a marble (marble A) and she puts it in her basket (basket S), then leaves the room. Anne moves marble A from Sally's basket (basket S) to her own basket (basket A).",</p>
+<ul>
+<li><code>instructions_2.txt</code></li>
+</ul>
+<p>"Sally gives a new marble (marble B) to Bob who is outside with her. Bob goes into the room and places marble B into Anne's basket (basket A). Anne tells Bob to tell Sally that he lost the marble b. Bob leaves the room and speaks to Sally about the marble B. Meanwhile, after Bob left the room, Anne moves marble A into the green box, but tells Charlie to tell Sally that marble A is under the sofa. Charlie leaves the room and speak to Sally about the marble A as instructed by Anne.",</p>
+<p>...and so on.</p>
+<ul>
+<li><code>instructions_n.txt</code></li>
+</ul>
+<p>The expected believes of every characters are given in a list:</p>
+<p>expected_beliefs = {
+    1: {
+        'Sally': {
+            'marble A': 'basket S',
+        },
+        'Anne': {
+            'marble A': 'basket A',
+        }
+    },
+    2: {
+        'Sally': {
+            'marble A': 'sofa',  # Because Charlie told her
+        },
+        'Anne': {
+            'marble A': 'green box',  # Because she moved it there
+            'marble B': 'basket A',  # Because Bob put it there and she was in the room
+        },
+        'Bob': {
+            'B': 'basket A',  # Last place he put it
+        },
+        'Charlie': {
+            'A': 'sofa',  # Because Anne told him to tell Sally so
+        }
+    },...</p>
+<h2 id="objective">Objective</h2>
+<p>This test essentially checks if an AI can accurately model and track the beliefs of different characters based on their knowledge of events, which is a critical aspect of understanding and generating human-like narratives. This ability would be beneficial for tasks such as writing stories, dialogue systems, and more.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../challenge_c/" class="btn btn-neutral float-left" title="Memory Challenge C"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../information_retrieval/introduction/" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Significant-Gravitas/Auto-GPT" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../challenge_c/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../information_retrieval/introduction/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

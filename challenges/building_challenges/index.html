@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://docs.agpt.co/challenges/building_challenges/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Creating Challenges for Auto-GPT - Auto-GPT</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Creating Challenges for Auto-GPT";
+        var mkdocs_page_input_path = "challenges/building_challenges.md";
+        var mkdocs_page_url = "/challenges/building_challenges/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Auto-GPT
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../setup/">Setup</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../usage/">Usage</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../plugins/">Plugins</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Configuration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../configuration/options/">Options</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../configuration/search/">Search</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../configuration/memory/">Memory</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../configuration/voice/">Voice</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../configuration/imagegen/">Image Generation</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Help us improve Auto-GPT</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../share-your-logs/">Share your debug logs with us</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../contributing/">Contribution guide</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../testing/">Running tests</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../code-of-conduct/">Code of Conduct</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Challenges</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../introduction/">Introduction</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="#">List of Challenges</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="#">Memory</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../memory/introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../memory/challenge_a/">Memory Challenge A</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../memory/challenge_b/">Memory Challenge B</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../memory/challenge_c/">Memory Challenge C</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../memory/challenge_d/">Memory Challenge D</a>
+                </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="#">Information retrieval</a>
+    <ul>
+                <li class="toctree-l3"><a class="reference internal" href="../information_retrieval/introduction/">Introduction</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../information_retrieval/challenge_a/">Information Retrieval Challenge A</a>
+                </li>
+                <li class="toctree-l3"><a class="reference internal" href="../information_retrieval/challenge_b/">Information Retrieval Challenge B</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../submit/">Submit a Challenge</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../beat/">Beat a Challenge</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://github.com/Significant-Gravitas/Auto-GPT/blob/master/LICENSE">License</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Auto-GPT</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+      <li class="breadcrumb-item active">Creating Challenges for Auto-GPT</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/Significant-Gravitas/Auto-GPT/edit/master/docs/challenges/building_challenges.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creating-challenges-for-auto-gpt">Creating Challenges for Auto-GPT</h1>
+<p>🏹 We're on the hunt for talented Challenge Creators! 🎯</p>
+<p>Join us in shaping the future of Auto-GPT by designing challenges that test its limits. Your input will be invaluable in guiding our progress and ensuring that we're on the right track. We're seeking individuals with a diverse skill set, including:</p>
+<p>🎨 UX Design: Your expertise will enhance the user experience for those attempting to conquer our challenges. With your help, we'll develop a dedicated section in our wiki, and potentially even launch a standalone website.</p>
+<p>💻 Coding Skills: Proficiency in Python, pytest, and VCR (a library that records OpenAI calls and stores them) will be essential for creating engaging and robust challenges.</p>
+<p>⚙️ DevOps Skills: Experience with CI pipelines in GitHub and possibly Google Cloud Platform will be instrumental in streamlining our operations.</p>
+<p>Are you ready to play a pivotal role in Auto-GPT's journey? Apply now to become a Challenge Creator by opening a PR! 🚀</p>
+<h1 id="getting-started">Getting Started</h1>
+<p>Clone the original Auto-GPT repo and checkout to master branch</p>
+<p>The challenges are not written using a specific framework. They try to be very agnostic
+The challenges are acting like a user that wants something done: 
+INPUT:
+- User desire
+- Files, other inputs</p>
+<p>Output =&gt; Artifact (files, image, code, etc, etc...)</p>
+<h2 id="defining-your-agent">Defining your Agent</h2>
+<p>Go to https://github.com/Significant-Gravitas/Auto-GPT/blob/master/tests/integration/agent_factory.py</p>
+<p>Create your agent fixture.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">kubernetes_agent</span><span class="p">(</span>
+    <span class="n">agent_test_config</span><span class="p">,</span> <span class="n">memory_json_file</span><span class="p">,</span> <span class="n">workspace</span><span class="p">:</span> <span class="n">Workspace</span>
+<span class="p">):</span>
+    <span class="c1"># Please choose the commands your agent will need to beat the challenges, the full list is available in the main.py</span>
+    <span class="c1"># (we &#39;re working on a better way to design this, for now you have to look at main.py)</span>
+    <span class="n">command_registry</span> <span class="o">=</span> <span class="n">CommandRegistry</span><span class="p">()</span>
+    <span class="n">command_registry</span><span class="o">.</span><span class="n">import_commands</span><span class="p">(</span><span class="s2">&quot;autogpt.commands.file_operations&quot;</span><span class="p">)</span>
+    <span class="n">command_registry</span><span class="o">.</span><span class="n">import_commands</span><span class="p">(</span><span class="s2">&quot;autogpt.app&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Define all the settings of our challenged agent</span>
+    <span class="n">ai_config</span> <span class="o">=</span> <span class="n">AIConfig</span><span class="p">(</span>
+        <span class="n">ai_name</span><span class="o">=</span><span class="s2">&quot;Kubernetes&quot;</span><span class="p">,</span>
+        <span class="n">ai_role</span><span class="o">=</span><span class="s2">&quot;an autonomous agent that specializes in creating Kubernetes deployment templates.&quot;</span><span class="p">,</span>
+        <span class="n">ai_goals</span><span class="o">=</span><span class="p">[</span>
+            <span class="s2">&quot;Write a simple kubernetes deployment file and save it as a kube.yaml.&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">)</span>
+    <span class="n">ai_config</span><span class="o">.</span><span class="n">command_registry</span> <span class="o">=</span> <span class="n">command_registry</span>
+
+    <span class="n">system_prompt</span> <span class="o">=</span> <span class="n">ai_config</span><span class="o">.</span><span class="n">construct_full_prompt</span><span class="p">()</span>
+    <span class="n">agent_test_config</span><span class="o">.</span><span class="n">set_continuous_mode</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">agent</span> <span class="o">=</span> <span class="n">Agent</span><span class="p">(</span>
+        <span class="n">memory</span><span class="o">=</span><span class="n">memory_json_file</span><span class="p">,</span>
+        <span class="n">command_registry</span><span class="o">=</span><span class="n">command_registry</span><span class="p">,</span>
+        <span class="n">config</span><span class="o">=</span><span class="n">ai_config</span><span class="p">,</span>
+        <span class="n">next_action_count</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
+        <span class="n">triggering_prompt</span><span class="o">=</span><span class="n">DEFAULT_TRIGGERING_PROMPT</span><span class="p">,</span>
+        <span class="n">workspace_directory</span><span class="o">=</span><span class="n">workspace</span><span class="o">.</span><span class="n">root</span><span class="p">,</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">agent</span>
+</code></pre></div>
+
+<h2 id="creating-your-challenge">Creating your challenge</h2>
+<p>Go to <code>tests/challenges</code>and create a file that is called <code>test_your_test_description.py</code> and add it to the appropriate folder. If no category exists you can create a new one.</p>
+<p>Your test could look something like this </p>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">contextlib</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Generator</span>
+
+<span class="kn">import</span> <span class="nn">pytest</span>
+<span class="kn">import</span> <span class="nn">yaml</span>
+
+<span class="kn">from</span> <span class="nn">autogpt.commands.file_operations</span> <span class="kn">import</span> <span class="n">read_file</span><span class="p">,</span> <span class="n">write_to_file</span>
+<span class="kn">from</span> <span class="nn">tests.integration.agent_utils</span> <span class="kn">import</span> <span class="n">run_interaction_loop</span>
+<span class="kn">from</span> <span class="nn">tests.challenges.utils</span> <span class="kn">import</span> <span class="n">run_multiple_times</span>
+
+<span class="k">def</span> <span class="nf">input_generator</span><span class="p">(</span><span class="n">input_sequence</span><span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Generator</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Creates a generator that yields input strings from the given sequence.</span>
+
+<span class="sd">    :param input_sequence: A list of input strings.</span>
+<span class="sd">    :return: A generator that yields input strings.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">yield from</span> <span class="n">input_sequence</span>
+
+
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">skip</span><span class="p">(</span><span class="s2">&quot;This challenge hasn&#39;t been beaten yet.&quot;</span><span class="p">)</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">vcr</span>
+<span class="nd">@pytest</span><span class="o">.</span><span class="n">mark</span><span class="o">.</span><span class="n">requires_openai_api_key</span>
+<span class="k">def</span> <span class="nf">test_information_retrieval_challenge_a</span><span class="p">(</span><span class="n">kubernetes_agent</span><span class="p">,</span> <span class="n">monkeypatch</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Test the challenge_a function in a given agent by mocking user inputs</span>
+<span class="sd">    and checking the output file content.</span>
+
+<span class="sd">    :param get_company_revenue_agent: The agent to test.</span>
+<span class="sd">    :param monkeypatch: pytest&#39;s monkeypatch utility for modifying builtins.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">input_sequence</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;s&quot;</span><span class="p">,</span> <span class="s2">&quot;EXIT&quot;</span><span class="p">]</span>
+    <span class="n">gen</span> <span class="o">=</span> <span class="n">input_generator</span><span class="p">(</span><span class="n">input_sequence</span><span class="p">)</span>
+    <span class="n">monkeypatch</span><span class="o">.</span><span class="n">setattr</span><span class="p">(</span><span class="s2">&quot;autogpt.utils.session.prompt&quot;</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">_</span><span class="p">:</span> <span class="nb">next</span><span class="p">(</span><span class="n">gen</span><span class="p">))</span>
+
+    <span class="k">with</span> <span class="n">contextlib</span><span class="o">.</span><span class="n">suppress</span><span class="p">(</span><span class="ne">SystemExit</span><span class="p">):</span>
+        <span class="n">run_interaction_loop</span><span class="p">(</span><span class="n">kubernetes_agent</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+    <span class="c1"># here we load the output file</span>
+    <span class="n">file_path</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">kubernetes_agent</span><span class="o">.</span><span class="n">workspace</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="s2">&quot;kube.yaml&quot;</span><span class="p">))</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">read_file</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+
+    <span class="c1"># then we check if it&#39;s including keywords from the kubernetes deployment config</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;apiVersion&quot;</span><span class="p">,</span> <span class="s2">&quot;kind&quot;</span><span class="p">,</span> <span class="s2">&quot;metadata&quot;</span><span class="p">,</span> <span class="s2">&quot;spec&quot;</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">content</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Expected the file to contain </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&quot;</span>
+
+    <span class="n">content</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;Service&quot;</span><span class="p">,</span> <span class="s2">&quot;Deployment&quot;</span><span class="p">,</span> <span class="s2">&quot;Pod&quot;</span><span class="p">]:</span>
+        <span class="k">assert</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">content</span><span class="p">[</span><span class="s2">&quot;kind&quot;</span><span class="p">],</span> <span class="sa">f</span><span class="s2">&quot;Expected the file to contain </span><span class="si">{</span><span class="n">word</span><span class="si">}</span><span class="s2">&quot;</span>
+</code></pre></div>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/Significant-Gravitas/Auto-GPT" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
