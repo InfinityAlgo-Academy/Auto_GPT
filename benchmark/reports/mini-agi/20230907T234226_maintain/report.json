@@ -1,0 +1,94 @@
+{
+    "command": "agbenchmark start --maintain --mock",
+    "benchmark_git_commit_sha": null,
+    "agent_git_commit_sha": "https://github.com/SilenNaihin/mini-agi/tree/2fc70aa0032eec986dfb1020854a1b3b8aaf6780",
+    "completion_time": "2023-09-07T23:42:31+00:00",
+    "benchmark_start_time": "2023-09-07T23:42:26+00:00",
+    "metrics": {
+        "run_time": "5.13 seconds",
+        "highest_difficulty": "novice: 3",
+        "total_cost": null
+    },
+    "tests": {
+        "TestReadFile": {
+            "data_path": "agbenchmark/challenges/abilities/read_file/data.json",
+            "is_regression": true,
+            "category": [
+                "interface"
+            ],
+            "task": "Read the file called file_to_read.txt and write its content to a file called output.txt",
+            "answer": "The content of output.txt should be 'Hello World!'",
+            "description": "Tests the ability for an agent to read a file.",
+            "metrics": {
+                "difficulty": "interface",
+                "success": true,
+                "attempted": true,
+                "success_%": 100.0,
+                "cost": null,
+                "run_time": "0.005 seconds"
+            },
+            "reached_cutoff": false
+        },
+        "TestRevenueRetrieval_1.0": {
+            "data_path": "agbenchmark/challenges/verticals/synthesize/r2_search_suite_1/1_tesla_revenue/data.json",
+            "is_regression": true,
+            "category": [
+                "retrieval",
+                "retrieval"
+            ],
+            "task": "Write tesla's exact revenue in 2022 into a .txt file. Use the US notation, with a precision rounded to the nearest million dollars (for instance, $31,578 billion).",
+            "answer": "It was $81.462 billion in 2022.",
+            "description": "A no guardrails search for info",
+            "metrics": {
+                "difficulty": "novice",
+                "success": true,
+                "attempted": true,
+                "success_%": 100.0,
+                "cost": null,
+                "run_time": "0.003 seconds"
+            },
+            "reached_cutoff": false
+        },
+        "TestSearch": {
+            "data_path": "agbenchmark/challenges/verticals/scraping/basic/data.json",
+            "is_regression": true,
+            "category": [
+                "interface"
+            ],
+            "task": "Open 'https://silennaihin.com/random/plain.html' and paste all of the text on the page in a .txt file",
+            "answer": "This is a Heading\nThis is a paragraph.",
+            "description": "Tests if an llm can search",
+            "metrics": {
+                "difficulty": "interface",
+                "success": true,
+                "attempted": true,
+                "success_%": 100.0,
+                "cost": null,
+                "run_time": "0.002 seconds"
+            },
+            "reached_cutoff": false
+        },
+        "TestBasicRetrieval": {
+            "data_path": "agbenchmark/challenges/verticals/scraping/r1_book_price/data.json",
+            "is_regression": true,
+            "category": [
+                "retrieval"
+            ],
+            "task": "Write the price of the book in this url 'http://books.toscrape.com/catalogue/meditations_33/index.html' to a .txt file.",
+            "answer": "\u00a325.89",
+            "description": "Specifies specific website to retrieve website from.",
+            "metrics": {
+                "difficulty": "basic",
+                "success": true,
+                "attempted": true,
+                "success_%": 100.0,
+                "cost": null,
+                "run_time": "0.002 seconds"
+            },
+            "reached_cutoff": false
+        }
+    },
+    "config": {
+        "workspace": "${os.path.join(Path.home(), 'miniagi')}"
+    }
+}

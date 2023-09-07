@@ -1,0 +1,94 @@
+{
+    "command": "agbenchmark start --mock --category=code",
+    "benchmark_git_commit_sha": null,
+    "agent_git_commit_sha": "https://github.com/SilenNaihin/mini-agi/tree/2fc70aa0032eec986dfb1020854a1b3b8aaf6780",
+    "completion_time": "2023-09-07T23:42:52+00:00",
+    "benchmark_start_time": "2023-09-07T23:42:48+00:00",
+    "metrics": {
+        "run_time": "4.04 seconds",
+        "highest_difficulty": "basic: 2",
+        "total_cost": null
+    },
+    "tests": {
+        "TestThreeSum": {
+            "data_path": "agbenchmark/challenges/verticals/code/1_three_sum/data.json",
+            "is_regression": false,
+            "category": [
+                "code",
+                "iterate"
+            ],
+            "task": "Create a three_sum function in a file called sample_code.py. Given an array of integers, return indices of the three numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the same element twice. Example: Given nums = [2, 7, 11, 15], target = 20, Because nums[0] + nums[1] + nums[2] = 2 + 7 + 11 = 20, return [0, 1, 2].",
+            "answer": "The three_sum function coded properly.",
+            "description": "Tests ability for the agent to create the three_sum function.",
+            "metrics": {
+                "difficulty": "basic",
+                "success": true,
+                "attempted": true,
+                "success_%": 0.0,
+                "cost": null,
+                "run_time": "0.041 seconds"
+            },
+            "reached_cutoff": false
+        },
+        "TestPasswordGenerator_Easy": {
+            "data_path": "agbenchmark/challenges/verticals/code/2_password_generator/data.json",
+            "is_regression": false,
+            "category": [
+                "code"
+            ],
+            "task": "Create a random password generator. The password should have between 8 and 16 characters and should contain letters, numbers and symbols. The password should be printed to the console. The entry point will be a python file that can be run this way: python password_generator.py [--len x] where x is the length of the password. If no length is specified, the password should be 8 characters long. The password_generator can also be imported as a module and called as password = password_generator.generate_password(len=x). Any invalid input should raise a ValueError.",
+            "answer": "password_generator.py is created and satisfies the requirements.",
+            "description": "Tests ability for the agent to create a random password generator.",
+            "metrics": {
+                "difficulty": "basic",
+                "success": true,
+                "attempted": true,
+                "success_%": 0,
+                "cost": null,
+                "run_time": "0.057 seconds"
+            },
+            "reached_cutoff": false
+        },
+        "TestUrlShortener": {
+            "data_path": "agbenchmark/challenges/verticals/code/4_url_shortener/data.json",
+            "is_regression": false,
+            "category": [
+                "code"
+            ],
+            "task": "Build a basic URL shortener using a python CLI. Here are the specifications.\n\nFunctionality: The program should have two primary functionalities.\n\nShorten a given URL.\nRetrieve the original URL from a shortened URL.\n\nCLI: The command-line interface should accept the URL to be shortened as its first input. After shortening, it should display ONLY the shortened URL, and it will prompt a url to access.\n\nYour primary requirements are:\n\nPrompt the user for the long url.\nReturn the shortened url.\nPrompt the user for a shortened url.\nReturn the long url.\n\nTechnical specifications:\nBuild a file called url_shortener.py. This file will be called through command lines.\n\nEdge cases:\nFor the sake of simplicity, there will be no edge cases, you can assume the input is always correct and the user immediately passes the shortened version of the url he just shortened.\n\nYou will be expected to create a python file called url_shortener.py that will run through command lines by using python url_shortener.py.\n\nThe url_shortener.py game will be tested this way:\n```\nimport unittest\nfrom url_shortener import shorten_url, retrieve_url\n\nclass TestURLShortener(unittest.TestCase):\n    def test_url_retrieval(self):\n        # Shorten the URL to get its shortened form\n        shortened_url = shorten_url('https://www.example.com')\n\n        # Retrieve the original URL using the shortened URL directly\n        retrieved_url = retrieve_url(shortened_url)\n\n        self.assertEqual(retrieved_url, 'https://www.example.com', \"Retrieved URL does not match the original!\")\n\nif __name__ == \"__main__\":\n    unittest.main()\n```",
+            "answer": "The correct python file for a basic url shortener CLI",
+            "description": "Tests ability for the agent to create a URL shortener.",
+            "metrics": {
+                "difficulty": "basic",
+                "success": true,
+                "attempted": true,
+                "success_%": 0,
+                "cost": null,
+                "run_time": "0.056 seconds"
+            },
+            "reached_cutoff": false
+        },
+        "TestWritingCLI_FileOrganizer": {
+            "data_path": "agbenchmark/challenges/verticals/code/3_file_organizer/data.json",
+            "is_regression": false,
+            "category": [
+                "code"
+            ],
+            "task": "Create a file organizer CLI tool in Python that sorts files in a directory based on their file types (e.g., images, documents, audio) and moves them into these corresponding folders: 'images', 'documents', 'audio'. The entry point will be a python file that can be run this way: python organize_files.py --directory_path=YOUR_DIRECTORY_PATH",
+            "answer": "The correct python file is written and organizes the files accordingly",
+            "description": "Tests ability for the agent to create a random password generator.",
+            "metrics": {
+                "difficulty": "basic",
+                "success": true,
+                "attempted": true,
+                "success_%": 0,
+                "cost": null,
+                "run_time": "0.101 seconds"
+            },
+            "reached_cutoff": false
+        }
+    },
+    "config": {
+        "workspace": "${os.path.join(Path.home(), 'miniagi')}"
+    }
+}
